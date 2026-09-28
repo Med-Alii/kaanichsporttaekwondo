@@ -1,0 +1,1786 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KST | Kaanich Sport Taekwondo</title>
+<meta name="description" content="الموقع الرسمي لـ Kaanich Sport Taekwondo K.S.T">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ==================== STYLES ==================== */
+:root {
+    --bg-dark: #0a0e17;
+    --bg-card: #161f30;
+    --bg-light: #f8fafc;
+    --text-light: #f8fafc;
+    --text-dark: #0f172a;
+    --primary-orange: #f59e0b;
+    --orange-hover: #d97706;
+    --text-gray: #94a3b8;
+    --danger-red: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* 1. Top Ticker Banner */
+.ticker-wrap {
+    background: var(--primary-orange);
+    color: var(--bg-dark);
+    font-weight: 800;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker 25s linear infinite;
+}
+
+.ticker-item {
+    padding: 0 2rem;
+}
+
+@keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Header & Nav */
+header {
+    position: fixed;
+    top: 32px;
+    width: 100%;
+    background: rgba(10, 14, 23, 0.92);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+    vertical-align: middle;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-orange);
+}
+
+.hamb {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.lang {
+    background: var(--primary-orange);
+    border: none;
+    color: var(--bg-dark);
+    font-weight: 800;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 180px;
+    padding-bottom: 90px;
+    background: 
+        radial-gradient(circle at 85% 20%, rgba(180, 50, 10, 0.45) 0%, rgba(180, 50, 10, 0.15) 30%, transparent 60%),
+        radial-gradient(circle at 15% 80%, rgba(15, 23, 42, 0.8) 0%, transparent 50%),
+        linear-gradient(180deg, #121824 0%, #080c14 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-copy {
+    flex: 1;
+}
+
+.mini {
+    color: var(--primary-orange);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero h1 span {
+    color: var(--primary-orange);
+}
+
+.hero p {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.8rem;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+}
+
+.btn.orange {
+    background-color: var(--primary-orange);
+    color: var(--bg-dark);
+}
+
+.btn.orange:hover {
+    background-color: var(--orange-hover);
+}
+
+.btn.outline {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn.outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn.danger {
+    background-color: var(--danger-red);
+    color: white;
+}
+
+.hero-logo {
+    max-width: 320px;
+    width: 100%;
+    filter: drop-shadow(0 0 25px rgba(245, 158, 11, 0.35));
+}
+
+/* Sections General */
+.section {
+    padding: 80px 0;
+}
+
+.section.dark {
+    background-color: #060911;
+}
+
+.section.light {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.label {
+    color: var(--primary-orange);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* Coach Section Dynamic Accordion */
+.coach-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    align-items: flex-start;
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.coach-img-wrapper {
+    flex: 0 0 280px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.coach-img-wrapper img {
+    width: 100%;
+    max-width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid var(--primary-orange);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.coach-img-wrapper:hover img {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+.coach-img-hint {
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--primary-orange);
+    font-weight: bold;
+}
+
+.coach-info {
+    flex: 1;
+    min-width: 280px;
+    width: 100%;
+}
+
+.coach-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.accordion-item {
+    background: #0a0e17;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.accordion-item.active {
+    border-color: var(--primary-orange);
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1rem 1.2rem;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: right;
+}
+
+.accordion-header:hover {
+    color: var(--primary-orange);
+}
+
+.accordion-icon {
+    color: var(--primary-orange);
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 1.2rem;
+    color: var(--text-gray);
+    font-size: 0.98rem;
+    line-height: 1.7;
+    white-space: pre-line;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 500px;
+    padding: 0.8rem 1.2rem 1.2rem 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* About Section Facts & Visitor Counter */
+.facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.facts div {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border-top: 3px solid var(--primary-orange);
+}
+
+.facts b {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--primary-orange);
+}
+
+.facts span {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* Visitor Counter Widget Banner */
+.visitor-counter-box {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #161f30 0%, #0a0e17 100%);
+    border: 1px dashed var(--primary-orange);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.visitor-counter-box b {
+    font-size: 2rem;
+    color: var(--primary-orange);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.visitor-counter-box span {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* Training Section Filter */
+.center {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.schedule-filter {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--primary-orange);
+    color: var(--bg-dark);
+    border-color: var(--primary-orange);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: 
+        radial-gradient(circle at 85% 20%, rgba(180, 50, 10, 0.35) 0%, rgba(180, 50, 10, 0.1) 40%, transparent 70%),
+        linear-gradient(180deg, #161f30 0%, #0a0e17 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.card-top span {
+    background: var(--primary-orange);
+    color: var(--bg-dark);
+    font-weight: 800;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+}
+
+.card-top b {
+    font-size: 1.2rem;
+}
+
+.times p {
+    margin-bottom: 0.8rem;
+    color: var(--text-gray);
+}
+
+.times strong {
+    color: var(--text-light);
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.location {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.location a {
+    color: var(--primary-orange);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Registration Form */
+.registration-box {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--primary-orange);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: right;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 6px;
+    background: #0a0e17;
+    border: 1px solid #334155;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Video Highlights Section */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.video-card {
+    background: var(--bg-card);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.video-card iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.video-card-body {
+    padding: 1rem;
+}
+
+.video-card-body h4 {
+    color: var(--primary-orange);
+    margin-bottom: 0.3rem;
+}
+
+/* Tips Section */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.tip-card {
+    background: white;
+    color: var(--text-dark);
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--primary-orange);
+}
+
+.tip-card h3 {
+    margin-bottom: 0.6rem;
+    font-size: 1.2rem;
+    color: #1e293b;
+}
+
+.tip-card p {
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+/* Team & Athletes Section */
+.athletes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.athlete {
+    background: var(--bg-card);
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.athlete:hover {
+    border-color: var(--primary-orange);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.2);
+}
+
+.athlete .avatar {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.athlete h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.athlete span {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.click-hint {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--primary-orange);
+    font-weight: 700;
+}
+
+/* News Section & Social Share Buttons */
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-card {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    position: relative;
+    border-right: 5px solid var(--primary-orange);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.news-card small {
+    color: var(--primary-orange);
+    font-weight: 700;
+}
+
+.news-card h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--text-dark);
+}
+
+.news-card p {
+    color: #475569;
+    font-size: 1rem;
+}
+
+.news-card img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.news-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.8rem;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 0.8rem;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--primary-orange);
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Social Share Bar inside News */
+.social-share-bar {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+.share-btn.whatsapp { background-color: #25D366; }
+.share-btn.facebook { background-color: #1877F2; }
+.share-btn:hover { opacity: 0.85; }
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item {
+    height: 180px;
+    background: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.gallery-item:hover {
+    border-color: var(--primary-orange);
+    transform: scale(1.02);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contact Section */
+.contact-box {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.map-container {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.phone-num {
+    direction: ltr;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Footer */
+footer {
+    background: #04060c;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot img {
+    height: 40px;
+}
+
+.foot a {
+    color: var(--text-gray);
+    text-decoration: none;
+}
+
+/* Floating Action Buttons */
+.floating-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1500;
+}
+
+.float-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.float-btn.whatsapp { background: #25D366; }
+.float-btn.phone { background: #3b82f6; }
+.float-btn.scroll-top { 
+    background: var(--primary-orange); 
+    color: var(--bg-dark);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.float-btn.scroll-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.float-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.88);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-box {
+    background: var(--bg-card);
+    width: 90%;
+    max-width: 850px;
+    padding: 2rem;
+    border-radius: 12px;
+    max-height: 85vh;
+    overflow-y: auto;
+    border: 1px solid var(--primary-orange);
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-header h3 {
+    color: var(--primary-orange);
+    font-size: 1.6rem;
+}
+
+.close-btn {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.lightbox-content {
+    background: var(--bg-card);
+    max-width: 800px;
+    width: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--primary-orange);
+    text-align: center;
+}
+
+.lightbox-content img {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+    background: #000;
+}
+
+.lightbox-nav-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: var(--primary-orange);
+    border: 1px solid var(--primary-orange);
+    font-size: 1.8rem;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.lightbox-nav-btn.prev { right: 10px; }
+.lightbox-nav-btn.next { left: 10px; }
+
+.lightbox-caption {
+    padding: 1.2rem;
+    text-align: right;
+}
+
+.lightbox-caption h3 {
+    color: var(--primary-orange);
+    margin-bottom: 0.4rem;
+    font-size: 1.3rem;
+}
+
+.lightbox-caption p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Category Grid Inside Modal */
+.category-players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.2rem;
+}
+
+.player-card {
+    background: #0a0e17;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    position: relative;
+}
+
+.player-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.player-card h4 {
+    padding: 0.8rem 0.5rem;
+    color: var(--text-light);
+    font-size: 1.05rem;
+}
+
+.delete-btn-card {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(239, 68, 68, 0.9);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    z-index: 5;
+    display: none;
+}
+
+body.admin-mode .delete-btn-card {
+    display: block;
+}
+
+.no-players {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-gray);
+}
+
+/* Admin Box */
+.admin-box select, .admin-box input, .admin-box textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background: #0a0e17;
+    border: 1px solid #334155;
+    color: white;
+    border-radius: 4px;
+}
+
+.text-edit-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+    background: #0a0e17;
+    padding: 0.8rem;
+    border-radius: 6px;
+}
+
+.text-edit-row label {
+    font-size: 0.85rem;
+    color: var(--primary-orange);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    header { top: 30px; }
+    nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        width: 100%;
+        background: #0a0e17;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    nav.open { display: flex; }
+    .hamb { display: block; }
+    .hero-inner, .grid2, .cards, .coach-card {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="ticker-wrap">
+    <div class="ticker">
+        <div class="ticker-item">🔥 مرحباً بكم في جمعية Kaanich Sport Taekwondo! فتح باب التسجيل للموسم الرياضي الجديد 2026-2027 🥋</div>
+        <div class="ticker-item">🏆 تهانينا لأبطال KST بمناسبة التتويج الأخير في البطولة الوطنية! ✨</div>
+        <div class="ticker-item">📍 المقر: Salle Kaanich Sport, Route Aéroport Km 4 - صفاقس 🇹🇳</div>
+    </div>
+</div>
+
+<header>
+    <div class="nav wrap">
+        <a href="#home" class="logo">
+            <img src="44326.png" alt="KST Logo">
+        </a>
+        <button class="hamb" onclick="toggleNav()">☰</button>
+        <nav id="nav">
+            <a href="#home" onclick="closeNav()">الرئيسية</a>
+            <a href="#about" onclick="closeNav()">عن الجمعية</a>
+            <a href="#coach" onclick="closeNav()">المدرب</a>
+            <a href="#register" onclick="closeNav()">التسجيل</a>
+            <a href="#training" onclick="closeNav()">التدريب</a>
+            <a href="#athletes" onclick="closeNav()">اللاعبون</a>
+            <a href="#videos" onclick="closeNav()">العروض</a>
+            <a href="#tips" onclick="closeNav()">نصائح</a>
+            <a href="#contact" onclick="closeNav()">اتصل بنا</a>
+        </nav>
+        <button class="lang" onclick="toggleLang()">FR</button>
+    </div>
+</header>
+
+<section id="home" class="hero">
+    <div class="wrap hero-inner">
+        <div class="hero-copy">
+            <div class="mini" id="text_hero_mini">KAANICH SPORT TAEKWONDO · K.S.T · EST. 2020</div>
+            <h1 id="text_hero_title">نصنع الأبطال<br><span>خطوة بخطوة</span></h1>
+            <p id="text_hero_desc">تايكواندو، انضباط، احترام، قوة وطموح.</p>
+            <div class="buttons">
+                <a class="btn orange" href="#register">احجز حصة تجريبية مجاناً</a>
+                <a class="btn outline" href="#training">جدول التمارين</a>
+            </div>
+        </div>
+        <img src="44326.png" class="hero-logo" alt="Logo">
+    </div>
+</section>
+
+<section id="about" class="section">
+    <div class="wrap grid2">
+        <div>
+            <div class="label">ABOUT KST</div>
+            <h2 id="text_about_title">عائلة رياضية تصنع المستقبل</h2>
+            <p id="text_about_p1">جمعية Kaanich Sport Taekwondo تهتم بتكوين اللاعبين في رياضة التايكواندو، من الفئات الشابة إلى الكبار، في إطار يجمع بين التربية الرياضية، الانضباط والتطور الفني.</p>
+            <p id="text_about_p2">هدفنا هو مساعدة كل لاعب على التقدم خطوة بخطوة، سواء كان هدفه ممارسة الرياضة، تطوير مستواه أو خوض المنافسات.</p>
+        </div>
+        <div class="facts" id="counter_section">
+            <div><b id="foundingYearDisplay">2020</b><span>سنة التأسيس</span></div>
+            <div><b>KST</b><span>هوية النادي</span></div>
+            <div><b>🥋</b><span>Kyorugi & Poomsae</span></div>
+            <div><b>🏆</b><span>منافسة وتتويج</span></div>
+            
+            <!-- عداد الزائرين -->
+            <div class="visitor-counter-box">
+                <b id="visitorCount">1,480</b>
+                <span>👀 عدد زوار الموقع</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="coach" class="section dark">
+    <div class="wrap">
+        <div class="center">
+            <div class="label">HEAD COACH</div>
+            <h2>المدرب الرئيسي</h2>
+        </div>
+        <div class="coach-card">
+            <div class="coach-img-wrapper" onclick="openCoachGallery()">
+                <img id="text_coach_img" src="Coach.jpg" alt="المدرب">
+                <div class="coach-img-hint">🔍 انقر لاستعراض ألبوم صور الكابتن</div>
+            </div>
+            <div class="coach-info">
+                <div class="coach-accordion">
+                    <div class="accordion-item active">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>👤 الاسم واللقب</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <strong id="text_coach_name" style="color: var(--primary-orange); font-size: 1.2rem;">الماستر / محمد علي جفّال Mohamed Ali Jaffel</strong>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>🥋 درجة الحزام</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" id="text_coach_rank">حزام أسود درجة 5</div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>📜 الصفة</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" id="text_coach_title">مدرب وطني</div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>🏆 نبذة تاريخية كلاعب</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" id="text_coach_bio">
+Athlète d'équipe National Kyorugui ( 2009 )
+Athlète d'équipe Régional Poomsae ( 2012 )
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="register" class="section">
+    <div class="wrap">
+        <div class="center">
+            <div class="label">REGISTRATION</div>
+            <h2>حجز حصة تجريبية أو تسجيل مبدئي</h2>
+            <p>قم بتعبئة النموذج وسنتواصل معك مباشرة لتأكيد الموعد</p>
+        </div>
+        <div class="registration-box">
+            <form id="trialForm" onsubmit="sendTrialToWhatsapp(event)">
+                <div class="form-group">
+                    <label>الاسم واللقب:</label>
+                    <input type="text" id="trialName" required placeholder="مثال: أحمد الصامت">
+                </div>
+                <div class="form-group">
+                    <label>عمر الطالب:</label>
+                    <input type="number" id="trialAge" required placeholder="مثال: 8">
+                </div>
+                <div class="form-group">
+                    <label>رقم الهاتف:</label>
+                    <input type="tel" id="trialPhone" required placeholder="22 446 105">
+                </div>
+                <div class="form-group">
+                    <label>الفئة العمرية:</label>
+                    <select id="trialGroup">
+                        <option value="أقل من 11 سنة">أقل من 11 سنة</option>
+                        <option value="11 سنة فما فوق">11 سنة فما فوق</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn orange" style="width: 100%; margin-top: 1rem;">تأكيد الحجز عبر WhatsApp 💬</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section id="training" class="section dark">
+    <div class="wrap">
+        <div class="center">
+            <div class="label">TRAINING</div>
+            <h2 id="text_training_title">مواعيد التدريب</h2>
+            <p id="text_training_subtitle">الموسم الرياضي 2026–2027</p>
+        </div>
+        <div class="schedule-filter">
+            <button class="filter-btn active" onclick="filterSchedule('all', this)">كل الأيام</button>
+            <button class="filter-btn" onclick="filterSchedule('الثلاثاء', this)">الثلاثاء</button>
+            <button class="filter-btn" onclick="filterSchedule('الأربعاء', this)">الأربعاء</button>
+            <button class="filter-btn" onclick="filterSchedule('الجمعة', this)">الجمعة</button>
+            <button class="filter-btn" onclick="filterSchedule('السبت', this)">السبت</button>
+        </div>
+        <div class="cards">
+            <article class="card">
+                <div class="card-top"><span>01</span><b>أقل من 11 سنة</b></div>
+                <div class="times">
+                    <p data-day="الثلاثاء">الثلاثاء <strong>18:00 — 19:30</strong></p>
+                    <p data-day="الأربعاء">الأربعاء <strong>19:15 — 20:45</strong></p>
+                    <p data-day="السبت">السبت <strong>14:00 — 15:30</strong></p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-top"><span>02</span><b>11 سنة فما فوق</b></div>
+                <div class="times">
+                    <p data-day="الثلاثاء">الثلاثاء <strong>19:30 — 21:00</strong></p>
+                    <p data-day="الجمعة">الجمعة <strong>19:30 — 21:00</strong></p>
+                    <p data-day="السبت">السبت <strong>15:30 — 17:00</strong></p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="athletes" class="section">
+    <div class="wrap">
+        <div class="center">
+            <div class="label">TEAM KST</div>
+            <h2>لاعبونا</h2>
+            <p>انقر على إحدى الفئات لعرض الصور</p>
+        </div>
+        <div class="athletes">
+            <div class="athlete" onclick="openCategoryModal('team')">
+                <div class="avatar">🥋</div>
+                <h3>فريق KST</h3>
+                <div class="click-hint">اضغط للاستعراض ➔</div>
+            </div>
+            <div class="athlete" onclick="openCategoryModal('champions')">
+                <div class="avatar">🏆</div>
+                <h3>أبطال KST</h3>
+                <div class="click-hint">اضغط للاستعراض ➔</div>
+            </div>
+            <div class="athlete" onclick="openCategoryModal('national')">
+                <div class="avatar">🇹🇳</div>
+                <h3>لاعبي المنتخب</h3>
+                <div class="click-hint">اضغط للاستعراض ➔</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="videos" class="section dark">
+    <div class="wrap">
+        <div class="center">
+            <div class="label">HIGHLIGHTS</div>
+            <h2>عروض ومقاطع الفيديو</h2>
+        </div>
+        <div class="video-grid">
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/xSpvhYmzJfY" title="عرض 1" allowfullscreen></iframe>
+                <div class="video-card-body">
+                    <h4>استعراض البومسي والمهارات</h4>
+                </div>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/2yBqHFyKekY" title="عرض 2" allowfullscreen></iframe>
+                <div class="video-card-body">
+                    <h4>نهائيات البطولة والتمارين</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="news" class="section">
+    <div class="wrap">
+        <div class="center">
+            <div class="label">NEWS</div>
+            <h2>آخر الأخبار</h2>
+        </div>
+        <div id="newsGrid" class="news-grid"></div>
+    </div>
+</section>
+
+<section id="gallery" class="section dark">
+    <div class="wrap">
+        <div class="center">
+            <div class="label">GALLERY</div>
+            <h2>معرض KST</h2>
+        </div>
+        <div id="galleryGrid" class="gallery-grid"></div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="wrap grid2">
+        <div>
+            <div class="label">CONTACT</div>
+            <h2>انضم إلى عائلة KST</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.854!2d10.73!3d34.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDQ1JzAwLjAiTiAxMMKwNDQnQmFzZS1hcmVhcw!5e0!3m2!1sar!2stn!4v1600000000000" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="contact-box">
+            <p>🏢 Route Aéroport Km 4، Sfax</p>
+            <p>📱 <span class="phone-num" dir="ltr">+216 22 446 105</span></p>
+            <div class="contact-buttons">
+                <a class="btn orange" href="https://wa.me/21622446105" target="_blank">تواصل مباشر عبر WhatsApp</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="wrap foot">
+        <img src="44326.png" alt="Logo">
+        <span>© 2026 Kaanich Sport Taekwondo</span>
+        <a href="javascript:void(0)" onclick="openAdmin()">إدارة الموقع (Admin)</a>
+    </div>
+</footer>
+
+<div class="floating-container">
+    <button class="float-btn scroll-top" id="scrollTopBtn" onclick="scrollToTop()">▲</button>
+    <a href="tel:+21622446105" class="float-btn phone">📞</a>
+    <a href="https://wa.me/21622446105" target="_blank" class="float-btn whatsapp">💬</a>
+</div>
+
+<!-- Modals -->
+<div id="categoryModal" class="modal" onclick="closeModalOnOut(event, 'categoryModal')">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h3 id="categoryTitle">فئة اللاعبين</h3>
+            <button class="close-btn" onclick="closeModal('categoryModal')">&times;</button>
+        </div>
+        <div id="categoryPlayersGrid" class="category-players-grid"></div>
+    </div>
+</div>
+
+<div id="lightboxModal" class="modal" onclick="closeModalOnOut(event, 'lightboxModal')">
+    <div class="lightbox-content">
+        <button class="close-btn" onclick="closeModal('lightboxModal')" style="position:absolute; top:10px; left:15px; z-index:10;">&times;</button>
+        <button class="lightbox-nav-btn prev" onclick="navigateLightbox(-1)">❮</button>
+        <button class="lightbox-nav-btn next" onclick="navigateLightbox(1)">❯</button>
+        <img id="lightboxImg" src="" alt="Zoomed">
+        <div class="lightbox-caption">
+            <h3 id="lightboxTitle"></h3>
+            <p id="lightboxDesc"></p>
+        </div>
+    </div>
+</div>
+
+<!-- Admin Modal -->
+<div id="adminModal" class="modal" onclick="closeModalOnOut(event, 'adminModal')">
+    <div class="modal-box admin-box">
+        <div class="modal-header">
+            <h3>لوحة التحكم الإدارية</h3>
+            <button class="close-btn" onclick="closeModal('adminModal')">&times;</button>
+        </div>
+        <button class="btn danger" onclick="resetAllData()" style="margin-bottom: 1.5rem; width:100%;">إعادة تعيين كافة البيانات</button>
+
+        <h4>✏️ تعديل سنة التأسيس</h4>
+        <div class="text-edit-row">
+            <label>سنة التأسيس:</label>
+            <input type="text" id="input_founding_year" placeholder="مثال: 2020">
+        </div>
+        <button class="btn orange" onclick="saveFoundingYear()" style="width:100%; margin-bottom: 1.5rem;">حفظ سنة التأسيس</button>
+
+        <h4>إضافة لاعب</h4>
+        <select id="playerCategorySelect">
+            <option value="team">فريق KST</option>
+            <option value="champions">أبطال KST</option>
+            <option value="national">لاعبي المنتخب</option>
+        </select>
+        <input type="text" id="playerNameInput" placeholder="اسم اللاعب">
+        <input type="text" id="playerImgInput" placeholder="رابط الصورة">
+        <button class="btn orange" onclick="addPlayer()" style="width:100%; margin-bottom: 1.5rem;">إضافة لاعب</button>
+
+        <h4>إضافة خبر جديد</h4>
+        <input type="text" id="newsTitleInput" placeholder="عنوان الخبر">
+        <textarea id="newsDescInput" placeholder="تفاصيل الخبر"></textarea>
+        <input type="text" id="newsImgInput" placeholder="رابط صورة الخبر">
+        <button class="btn orange" onclick="addNews()" style="width:100%; margin-bottom: 1.5rem;">نشر الخبر</button>
+
+        <h4>إضافة صورة للمعرض</h4>
+        <input type="text" id="galleryTitleInput" placeholder="عنوان الصورة">
+        <input type="text" id="galleryImgInput" placeholder="رابط الصورة">
+        <button class="btn orange" onclick="addGalleryImg()" style="width:100%;">إضافة للمعرض</button>
+    </div>
+</div>
+
+<script>
+let isAdminLoggedIn = false;
+
+const defaultTexts = {
+    founding_year: "2020"
+};
+
+let currentLightboxList = [];
+let currentLightboxIndex = 0;
+
+function sendTrialToWhatsapp(e) {
+    e.preventDefault();
+    let name = document.getElementById('trialName').value;
+    let age = document.getElementById('trialAge').value;
+    let phone = document.getElementById('trialPhone').value;
+    let group = document.getElementById('trialGroup').value;
+    let msg = `مرحباً، أود حجز حصة تجريبية:%0A- الاسم: ${name}%0A- العمر: ${age}%0A- الهاتف: ${phone}%0A- الفئة: ${group}`;
+    window.open(`https://wa.me/21622446105?text=${msg}`, '_blank');
+}
+
+function toggleAccordion(button) {
+    const item = button.parentElement;
+    const isActive = item.classList.contains('active');
+    document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
+    if (!isActive) item.classList.add('active');
+}
+
+function filterSchedule(day, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.times p').forEach(p => {
+        if (day === 'all' || p.getAttribute('data-day') === day) {
+            p.style.display = 'block';
+        } else {
+            p.style.display = 'none';
+        }
+    });
+}
+
+function openCoachGallery() {
+    currentLightboxList = [{ img: "Coach.jpg", title: "الماستر محمد علي جفّال", desc: "صورة الكابتن بالحزام الأسود" }];
+    currentLightboxIndex = 0;
+    showLightboxItem();
+    document.getElementById('lightboxModal').style.display = 'flex';
+}
+
+function openLightboxList(list, index) {
+    currentLightboxList = list;
+    currentLightboxIndex = index;
+    showLightboxItem();
+    document.getElementById('lightboxModal').style.display = 'flex';
+}
+
+function showLightboxItem() {
+    if(currentLightboxList.length === 0) return;
+    let item = currentLightboxList[currentLightboxIndex];
+    document.getElementById('lightboxImg').src = item.img;
+    document.getElementById('lightboxTitle').innerText = item.title || '';
+    document.getElementById('lightboxDesc').innerText = item.desc || '';
+}
+
+function navigateLightbox(direction) {
+    currentLightboxIndex += direction;
+    if (currentLightboxIndex < 0) currentLightboxIndex = currentLightboxList.length - 1;
+    else if (currentLightboxIndex >= currentLightboxList.length) currentLightboxIndex = 0;
+    showLightboxItem();
+}
+
+function toggleNav() { document.getElementById('nav').classList.toggle('open'); }
+function closeNav() { document.getElementById('nav').classList.remove('open'); }
+function toggleLang() { alert('قريباً'); }
+
+function openAdmin() {
+    if (isAdminLoggedIn) {
+        document.getElementById('adminModal').style.display = 'flex';
+        return;
+    }
+    let pass = prompt("أدخل كلمة المرور لدخول الإدارة (1234):");
+    if(pass === "1234") {
+        isAdminLoggedIn = true;
+        document.body.classList.add('admin-mode');
+        document.getElementById('adminModal').style.display = 'flex';
+        renderNews();
+        renderGallery();
+        
+        let texts = getStoredData('kst_texts', defaultTexts);
+        document.getElementById('input_founding_year').value = texts.founding_year || "2020";
+    } else if(pass !== null) {
+        alert("كلمة المرور غير صحيحة!");
+    }
+}
+
+function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+function closeModalOnOut(e, id) { if (e.target.id === id) document.getElementById(id).style.display = 'none'; }
+
+function getStoredData(key, fallback) {
+    const data = localStorage.getItem(key);
+    return data ? JSON.parse(data) : fallback;
+}
+
+function setStoredData(key, data) {
+    localStorage.setItem(key, JSON.stringify(data));
+}
+
+let currentCategoryKey = '';
+
+function openCategoryModal(catKey) {
+    currentCategoryKey = catKey;
+    renderCategoryPlayers();
+    document.getElementById('categoryModal').style.display = 'flex';
+}
+
+const defaultPlayers = [
+    { id: 1, category: 'team', name: 'لاعب KST', img: 'Coach.jpg' },
+    { id: 2, category: 'champions', name: 'البطل المتوج', img: 'Coach.jpg' },
+    { id: 3, category: 'national', name: 'لاعب المنتخب', img: '44326.png' }
+];
+
+function renderCategoryPlayers() {
+    let players = getStoredData('kst_players', defaultPlayers);
+    let filtered = players.filter(p => p.category === currentCategoryKey);
+    let container = document.getElementById('categoryPlayersGrid');
+    container.innerHTML = '';
+
+    if (filtered.length === 0) {
+        container.innerHTML = '<div class="no-players">لا توجد صور مضافة لهذه الفئة حالياً.</div>';
+    } else {
+        filtered.forEach((p, idx) => {
+            let card = document.createElement('div');
+            card.className = 'player-card';
+            card.innerHTML = `
+                <button class="delete-btn-card" onclick="deletePlayer(event, ${p.id})">حذف</button>
+                <img src="${p.img}" alt="${p.name || ''}">
+                ${p.name ? `<h4>${p.name}</h4>` : ''}
+            `;
+            card.onclick = (e) => {
+                if(!e.target.classList.contains('delete-btn-card')) {
+                    openLightboxList(filtered.map(item => ({ img: item.img, title: item.name || '', desc: '' })), idx);
+                }
+            };
+            container.appendChild(card);
+        });
+    }
+}
+
+function addPlayer() {
+    let category = document.getElementById('playerCategorySelect').value;
+    let name = document.getElementById('playerNameInput').value;
+    let img = document.getElementById('playerImgInput').value;
+    if (!img) { alert('يرجى وضع رابط الصورة!'); return; }
+    let players = getStoredData('kst_players', defaultPlayers);
+    players.push({ id: Date.now(), category, name, img });
+    setStoredData('kst_players', players);
+    document.getElementById('playerNameInput').value = '';
+    document.getElementById('playerImgInput').value = '';
+    renderCategoryPlayers();
+    alert('تمت الإضافة بنجاح!');
+}
+
+function deletePlayer(e, id) {
+    e.stopPropagation();
+    if (confirm('هل أنت متأكد من الحذف؟')) {
+        let players = getStoredData('kst_players', defaultPlayers);
+        players = players.filter(p => p.id !== id);
+        setStoredData('kst_players', players);
+        renderCategoryPlayers();
+    }
+}
+
+const defaultNews = [
+    { id: 1, title: "انطلاق التسجيل للموسم الجديد", desc: "تعلن جمعية Kaanich Sport Taekwondo عن فتح باب التسجيل للموسم الرياضي الحالي.", img: "Coach.jpg" }
+];
+
+function renderNews() {
+    let newsList = getStoredData('kst_news', defaultNews);
+    let container = document.getElementById('newsGrid');
+    container.innerHTML = '';
+
+    newsList.forEach((n, idx) => {
+        let card = document.createElement('article');
+        card.className = 'news-card';
+        card.innerHTML = `
+            <button class="delete-btn-card" onclick="deleteNews(event, ${n.id})">حذف</button>
+            <small>KST NEWS</small>
+            <h3>${n.title}</h3>
+            ${n.img ? `<img src="${n.img}" alt="${n.title}">` : ''}
+            <p>${n.desc}</p>
+            <div class="news-footer-row">
+                <button class="read-more-btn" onclick="openLightboxList(newsList.map(item => ({ img: item.img, title: item.title, desc: item.desc })), ${idx})">عرض المزيد ...</button>
+                <div class="social-share-bar">
+                    <span style="font-size:0.8rem; font-weight:bold; color:#475569;">مشاركة:</span>
+                    <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(n.title + ' - ' + n.desc)}" target="_blank" class="share-btn whatsapp">واتساب</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}" target="_blank" class="share-btn facebook">فيسبوك</a>
+                </div>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
+
+function addNews() {
+    let title = document.getElementById('newsTitleInput').value;
+    let desc = document.getElementById('newsDescInput').value;
+    let img = document.getElementById('newsImgInput').value;
+    if (!title || !desc) { alert('يرجى ملء الحقول الضرورية!'); return; }
+    let newsList = getStoredData('kst_news', defaultNews);
+    newsList.unshift({ id: Date.now(), title, desc, img });
+    setStoredData('kst_news', newsList);
+    document.getElementById('newsTitleInput').value = '';
+    document.getElementById('newsDescInput').value = '';
+    document.getElementById('newsImgInput').value = '';
+    renderNews();
+    alert('تم نشر الخبر بنجاح!');
+}
+
+function deleteNews(e, id) {
+    e.stopPropagation();
+    if (confirm('هل أنت متأكد من حذف الخبر؟')) {
+        let newsList = getStoredData('kst_news', defaultNews);
+        newsList = newsList.filter(n => n.id !== id);
+        setStoredData('kst_news', newsList);
+        renderNews();
+    }
+}
+
+const defaultGallery = [
+    { id: 1, title: "معرض KST", img: "Coach.jpg", desc: "صور التتويج والبطولات" }
+];
+
+function renderGallery() {
+    let items = getStoredData('kst_gallery', defaultGallery);
+    let container = document.getElementById('galleryGrid');
+    container.innerHTML = '';
+
+    items.forEach((g, idx) => {
+        let div = document.createElement('div');
+        div.className = 'gallery-item';
+        div.innerHTML = `
+            <button class="delete-btn-card" onclick="deleteGallery(event, ${g.id})">حذف</button>
+            <img src="${g.img}" alt="${g.title}">
+        `;
+        div.onclick = (e) => {
+            if(!e.target.classList.contains('delete-btn-card')) {
+                openLightboxList(items.map(item => ({ img: item.img, title: item.title, desc: item.desc })), idx);
+            }
+        };
+        container.appendChild(div);
+    });
+}
+
+function addGalleryImg() {
+    let title = document.getElementById('galleryTitleInput').value;
+    let img = document.getElementById('galleryImgInput').value;
+    if (!img) { alert('يرجى وضع رابط الصورة!'); return; }
+    let items = getStoredData('kst_gallery', defaultGallery);
+    items.unshift({ id: Date.now(), title: title || 'معرض KST', img, desc: '' });
+    setStoredData('kst_gallery', items);
+    document.getElementById('galleryTitleInput').value = '';
+    document.getElementById('galleryImgInput').value = '';
+    renderGallery();
+    alert('تمت الإضافة للمعرض بنجاح!');
+}
+
+function deleteGallery(e, id) {
+    e.stopPropagation();
+    if (confirm('هل أنت متأكد من الحذف؟')) {
+        let items = getStoredData('kst_gallery', defaultGallery);
+        items = items.filter(g => g.id !== id);
+        setStoredData('kst_gallery', items);
+        renderGallery();
+    }
+}
+
+function saveFoundingYear() {
+    let year = document.getElementById('input_founding_year').value;
+    if(year) {
+        let texts = getStoredData('kst_texts', defaultTexts);
+        texts.founding_year = year;
+        setStoredData('kst_texts', texts);
+        document.getElementById('foundingYearDisplay').innerText = year;
+        alert('تم حفظ سنة التأسيس بنجاح!');
+    }
+}
+
+function resetAllData() {
+    if (confirm('هل أنت متأكد من إعادة تعيين البيانات؟')) {
+        localStorage.clear();
+        location.reload();
+    }
+}
+
+/* نظام عداد الزائرين التفاعلي */
+function initVisitorCounter() {
+    let visits = localStorage.getItem('kst_visitor_count');
+    if (!visits) {
+        visits = 1450; // رقم ابتدائي افتراضي جذاب
+    } else {
+        visits = parseInt(visits);
+        // نزيد الزيارة مرة واحدة فقط لكل جلسة متصفح
+        if (!sessionStorage.getItem('visited_session')) {
+            visits += 1;
+            sessionStorage.setItem('visited_session', 'true');
+        }
+    }
+    localStorage.setItem('kst_visitor_count', visits);
+    let counterElem = document.getElementById('visitorCount');
+    if(counterElem) {
+        counterElem.innerText = visits.toLocaleString();
+    }
+}
+
+window.onscroll = function() {
+    let btn = document.getElementById('scrollTopBtn');
+    if (document.documentElement.scrollTop > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+};
+
+function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+window.onload = function() {
+    renderNews();
+    renderGallery();
+    initVisitorCounter();
+    
+    let texts = getStoredData('kst_texts', defaultTexts);
+    if(texts.founding_year) {
+        document.getElementById('foundingYearDisplay').innerText = texts.founding_year;
+    }
+};
+</script>
+</body>
+</html>
